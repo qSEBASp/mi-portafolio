@@ -280,6 +280,29 @@ ul {
   color: var(--color-primario);
 }
 
+.filosofia {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--color-primario);
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.07), rgba(255, 101, 132, 0.05));
+  border-radius: 0 var(--radio) var(--radio) 0;
+  color: var(--color-texto-suave);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.filosofia strong {
+  color: var(--color-primario);
+  font-style: normal;
+}
+
+.filosofia em {
+  color: var(--color-secundario);
+  font-style: normal;
+  font-weight: 600;
+}
+
 .info-lista {
   display: flex;
   flex-direction: column;

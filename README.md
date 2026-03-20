@@ -32,6 +32,15 @@ mi-portafolio/
 
 ---
 
+## Filosofía de trabajo
+
+> Uso la inteligencia artificial como andamio, no como arquitecto.
+> Le pido que construya la base, y luego la moldeo con criterio propio
+> hasta que el resultado deje de ser "lo que generó la IA" y se convierta
+> en algo **funcional, sólido y con personalidad**.
+
+---
+
 ## Tecnologías
 
 - HTML5 semántico
