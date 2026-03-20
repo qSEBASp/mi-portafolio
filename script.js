@@ -1,6 +1,6 @@
-// =============================================
+// q=============================================
 // MENÚ MÓVIL
-// =============================================
+// =============================================p
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -15,9 +15,9 @@ document.querySelectorAll('.nav-links a').forEach(enlace => {
   });
 });
 
-// =============================================
+// q=============================================
 // NAVBAR: cambio de estilo al hacer scroll
-// =============================================
+// =============================================p
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -28,10 +28,10 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// =============================================
+// q=============================================
 // ANIMACIÓN DE BARRAS DE PROGRESO
 // Al aparecer en pantalla, las barras se animan
-// =============================================
+// =============================================p
 const barras = document.querySelectorAll('.barra-relleno');
 
 const observador = new IntersectionObserver((entradas) => {
@@ -46,9 +46,9 @@ const observador = new IntersectionObserver((entradas) => {
 
 barras.forEach(barra => observador.observe(barra));
 
-// =============================================
+// q=============================================
 // FORMULARIO DE CONTACTO
-// =============================================
+// =============================================p
 const form = document.getElementById('contactoForm');
 
 form.addEventListener('submit', (e) => {
@@ -72,10 +72,10 @@ form.addEventListener('submit', (e) => {
   }, 3000);
 });
 
-// =============================================
+// q=============================================
 // ANIMACIÓN DE APARICIÓN DE ELEMENTOS
 // Las cards aparecen con fade-in al entrar en pantalla
-// =============================================
+// =============================================p
 const elementosAnimados = document.querySelectorAll(
   '.habilidad-card, .proyecto-card, .sobre-mi-grid, .contacto-grid'
 );
