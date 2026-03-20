@@ -208,14 +208,33 @@ ul {
   background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
 }
 
-.hero-avatar {
-  width: 120px;
-  height: 120px;
+.hero-avatares {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.burbuja-foto img,
+.burbuja-logo img {
   border-radius: 50%;
   object-fit: cover;
+  display: block;
+}
+
+.burbuja-foto img {
+  width: 130px;
+  height: 130px;
   border: 3px solid var(--color-primario);
   box-shadow: 0 0 0 6px rgba(108, 99, 255, 0.15);
-  margin-bottom: 1.5rem;
+}
+
+.burbuja-logo img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--color-secundario);
+  box-shadow: 0 0 0 5px rgba(255, 101, 132, 0.12);
 }
 
 .hero-saludo {
