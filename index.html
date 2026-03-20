@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qSEBASp | Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ========== NAVEGACIÓN ========== -->
+    <nav class="navbar">
+      <div class="nav-logo">&lt;qSEBASp /&gt;</div>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="hero-saludo">Hola, soy</p>
+        <h1 class="hero-nombre">Sebastián Quiqui</h1>
+        <p class="hero-nickname">aka <span>qSEBASp</span></p>
+        <h2 class="hero-rol">Programador empírico &amp; autodidacta</h2>
+        <p class="hero-descripcion">
+          Me apasiona la programación: soy empírico, aprendo rápido y me adapto a cualquier desafío.
+          También tengo habilidades de liderazgo y disfruto construir proyectos que generen impacto.
+        </p>
+        <div class="hero-botones">
+          <a href="#proyectos" class="btn btn-primario">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-secundario">Contáctame</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOBRE MÍ ========== -->
+    <section class="seccion" id="sobre-mi">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Sobre mí</h2>
+        <div class="sobre-mi-grid">
+          <div class="sobre-mi-texto">
+            <p>
+              Soy un <strong>programador empírico</strong> con mucha motivación por crecer cada día.
+              Aprendo rápido, practico constantemente y convierto cada reto en una oportunidad de mejora.
+            </p>
+            <p>
+              Me apasiona la programación y también cuento con <strong>habilidades de liderazgo</strong>,
+              lo que me permite aportar tanto en lo técnico como en la organización de equipos y proyectos.
+            </p>
+            <p>
+              Actualmente sigo fortaleciendo <strong>HTML, CSS, JavaScript</strong> y <strong>Python</strong>,
+              mientras construyo proyectos para mostrar mi progreso real.
+            </p>
+          </div>
+          <div class="sobre-mi-info">
+            <ul class="info-lista">
+              <li><span>📍 Ubicación:</span> Tu ciudad</li>
+              <li><span>🎓 Estado:</span> Estudiando</li>
+              <li><span>💼 Disponible:</span> Para proyectos</li>
+              <li><span>🌐 Idiomas:</span> Español, Inglés</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HABILIDADES ========== -->
+    <section class="seccion seccion-oscura" id="habilidades">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Habilidades</h2>
+        <div class="habilidades-grid">
+
+          <div class="habilidad-card">
+            <div class="habilidad-icono">🌐</div>
+            <h3>HTML</h3>
+            <p>Estructura semántica de páginas web.</p>
+            <div class="barra-progreso">
+              <div class="barra-relleno" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-card">
+            <div class="habilidad-icono">🎨</div>
+            <h3>CSS</h3>
+            <p>Estilos, layouts y diseño responsivo.</p>
+            <div class="barra-progreso">
+              <div class="barra-relleno" style="width: 50%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-card">
+            <div class="habilidad-icono">⚡</div>
+            <h3>JavaScript</h3>
+            <p>Interactividad y lógica en el navegador.</p>
+            <div class="barra-progreso">
+              <div class="barra-relleno" style="width: 40%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-card">
+            <div class="habilidad-icono">🐍</div>
+            <h3>Python</h3>
+            <p>Scripts y automatización.</p>
+            <div class="barra-progreso">
+              <div class="barra-relleno" style="width: 35%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROYECTOS ========== -->
+    <section class="seccion" id="proyectos">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Proyectos</h2>
+        <div class="proyectos-grid">
+
+          <!-- Proyecto 1 -->
+          <div class="proyecto-card">
+            <div class="proyecto-imagen">🚀</div>
+            <div class="proyecto-info">
+              <h3>Nombre del Proyecto</h3>
+              <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
+              <div class="proyecto-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <div class="proyecto-links">
+                <a href="#" class="btn btn-pequeño">Ver código</a>
+                <a href="#" class="btn btn-pequeño btn-outline">Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="proyecto-card">
+            <div class="proyecto-imagen">💡</div>
+            <div class="proyecto-info">
+              <h3>Otro Proyecto</h3>
+              <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
+              <div class="proyecto-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS</span>
+              </div>
+              <div class="proyecto-links">
+                <a href="#" class="btn btn-pequeño">Ver código</a>
+                <a href="#" class="btn btn-pequeño btn-outline">Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="proyecto-card">
+            <div class="proyecto-imagen">🐍</div>
+            <div class="proyecto-info">
+              <h3>Script Python</h3>
+              <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
+              <div class="proyecto-tags">
+                <span class="tag">Python</span>
+              </div>
+              <div class="proyecto-links">
+                <a href="#" class="btn btn-pequeño">Ver código</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="seccion seccion-oscura" id="contacto">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Contacto</h2>
+        <div class="contacto-grid">
+          <div class="contacto-info">
+            <p>¿Tienes algún proyecto en mente o simplemente quieres saludar? ¡Escríbeme!</p>
+            <ul class="contacto-lista">
+              <li>📧 <a href="mailto:qSEBASp@hotmail.com">qSEBASp@hotmail.com</a></li>
+              <li>📱 <a href="tel:+573042966826">+57 304 296 6826</a></li>
+              <li>🐙 <a href="https://github.com/qSEBASp" target="_blank">github.com/qSEBASp</a></li>
+            </ul>
+          </div>
+          <form class="contacto-form" id="contactoForm">
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu email" required />
+            <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <p>Hecho con ❤️ por Sebastián Quiqui (qSEBASp) &mdash; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
