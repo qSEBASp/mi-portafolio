@@ -34,10 +34,10 @@ mi-portafolio/
 
 ## Filosofía de trabajo
 
-> Uso la inteligencia artificial como andamio, no como arquitecto.
-> Le pido que construya la base, y luego la moldeo con criterio propio
-> hasta que el resultado deje de ser "lo que generó la IA" y se convierta
-> en algo **funcional, sólido y con personalidad**.
+> Me gusta apoyarme en la IA para arrancar con una base sólida,
+> pero no me quedo con lo primero que me da. Lo reviso, lo ajusto
+> y le meto mano hasta que el resultado sea realmente mío:
+> **limpio, funcional y con mi propio estilo**.
 
 ---
 
