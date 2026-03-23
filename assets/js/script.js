@@ -76,9 +76,40 @@ form.addEventListener('submit', (e) => {
   }, 3000);
 });
 
+const form = document.getElementById('contactoForm');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // Prevenir envío normal
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      // Éxito
+      alert('¡Mensaje enviado correctamente! Gracias por contactarme.');
+      form.reset(); // Limpiar formulario
+    } else {
+      // Error
+      alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo.');
+    }
+  } catch (error) {
+    alert('Error de conexión. Verifica tu internet e intenta de nuevo.');
+  }
+});
+
+
 // =============================================
 // ANIMACIÓN DE APARICIÓN DE ELEMENTOS
-// Las cards aparecen con fade-in al entrar en pantalla
+// Las cards aparecen con fade-in en la pantalla
 // =============================================
 
 const elementosAnimados = document.querySelectorAll(
