@@ -76,7 +76,7 @@ form.addEventListener('submit', (e) => {
   }, 3000);
 });
 
-const form = document.getElementById('contactoForm');
+const Form = document.getElementById('contactoForm');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault(); // Prevenir envío normal
