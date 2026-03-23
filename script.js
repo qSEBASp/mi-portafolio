@@ -1,6 +1,7 @@
 // =============================================
 // MENÚ MÓVIL
 // =============================================
+
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -18,6 +19,7 @@ document.querySelectorAll('.nav-links a').forEach(enlace => {
 // =============================================
 // NAVBAR: cambio de estilo al hacer scroll
 // =============================================
+
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -32,6 +34,7 @@ window.addEventListener('scroll', () => {
 // ANIMACIÓN DE BARRAS DE PROGRESO
 // Al aparecer en pantalla, las barras se animan
 // =============================================
+
 const barras = document.querySelectorAll('.barra-relleno');
 
 const observador = new IntersectionObserver((entradas) => {
@@ -49,6 +52,7 @@ barras.forEach(barra => observador.observe(barra));
 // =============================================
 // FORMULARIO DE CONTACTO
 // =============================================
+
 const form = document.getElementById('contactoForm');
 
 form.addEventListener('submit', (e) => {
@@ -76,6 +80,7 @@ form.addEventListener('submit', (e) => {
 // ANIMACIÓN DE APARICIÓN DE ELEMENTOS
 // Las cards aparecen con fade-in al entrar en pantalla
 // =============================================
+
 const elementosAnimados = document.querySelectorAll(
   '.habilidad-card, .proyecto-card, .sobre-mi-grid, .contacto-grid'
 );
@@ -105,3 +110,4 @@ const observadorEntrada = new IntersectionObserver((entradas) => {
 }, { threshold: 0.1 });
 
 elementosAnimados.forEach(el => observadorEntrada.observe(el));
+
