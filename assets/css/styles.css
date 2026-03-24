@@ -1,6 +1,6 @@
-/* =============================================
+/*======================
     VARIABLES Y RESET
-   ============================================= */
+======================*/
 :root {
   --color-primario: #6c63ff;
   --color-secundario: #ff6584;
@@ -42,11 +42,11 @@ ul {
   list-style: none;
 }
 
-/* =============================================
+/*============================
     COMPONENTES REUTILIZABLES
-   ============================================= */
+=============================*/
 .contenedor {
-  max-width: 1100px;
+    max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -92,22 +92,26 @@ ul {
 .btn-primario {
   background-color: var(--color-primario);
   color: white;
+  border-radius: 20px;
+  border: 8px solid var(--color-primario);
 }
 
 .btn-primario:hover {
   background-color: #5a52d5;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+  box-shadow: 0 8px 20px #5a52d5;
+  border: 8px solid #5a52d5;
 }
 
 .btn-secundario {
   background-color: transparent;
   color: var(--color-primario);
   border-color: var(--color-primario);
+  border: 5px solid transparent
 }
 
 .btn-secundario:hover {
-  background-color: var(--color-primario);
+  background-color: transparent;
   color: white;
   transform: translateY(-2px);
 }
@@ -146,9 +150,9 @@ ul {
   border: 1px solid rgba(108, 99, 255, 0.3);
 }
 
-/* =============================================
-   NAVBAR
-   ============================================= */
+/*===========
+    NAVBAR
+=========== */
 .navbar {
   position: fixed;
   top: 0;
@@ -190,14 +194,15 @@ ul {
   display: none;
   background: none;
   border: none;
+  border: 20px;
   color: var(--color-texto);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* =============================================
+/*=========
     HERO
-   ============================================= */
+========== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -289,9 +294,9 @@ ul {
   flex-wrap: wrap;
 }
 
-/* =============================================
-   SOBRE MÍ
-   ============================================= */
+/*============
+    SOBRE MÍ
+==============*/
 .sobre-mi-grid {
   display: grid;
   grid-template-columns: auto 1fr 1fr;
@@ -366,9 +371,9 @@ ul {
   font-weight: 600;
 }
 
-/* =============================================
-   HABILIDADES
-   ============================================= */
+/*===============
+    HABILIDADES
+================*/
 .habilidades-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -538,9 +543,9 @@ ul {
   border-color: var(--color-primario);
 }
 
-/* =============================================
-   FOOTER
-   ============================================= */
+/*===========
+    FOOTER
+============*/
 .footer {
   text-align: center;
   padding: 2rem;
@@ -549,9 +554,9 @@ ul {
   border-top: 1px solid var(--color-borde);
 }
 
-/* =============================================
+/*=================
     RESPONSIVE
-   ============================================= */
+==================*/
 @media (max-width: 768px) {
   .nav-links {
     display: none;

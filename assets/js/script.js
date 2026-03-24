@@ -1,6 +1,6 @@
-// =============================================
+// ============
 // MENÚ MÓVIL
-// =============================================
+// ============
 
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
@@ -16,9 +16,9 @@ document.querySelectorAll('.nav-links a').forEach(enlace => {
   });
 });
 
-// =============================================
+// ===========================================
 // NAVBAR: cambio de estilo al hacer scroll
-// =============================================
+// ===========================================
 
 const navbar = document.querySelector('.navbar');
 
@@ -30,10 +30,10 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// =============================================
+// ===============================================
 // ANIMACIÓN DE BARRAS DE PROGRESO
 // Al aparecer en pantalla, las barras se animan
-// =============================================
+// ===============================================
 
 const barras = document.querySelectorAll('.barra-relleno');
 
@@ -107,10 +107,10 @@ form.addEventListener('submit', async (e) => {
 });
 
 
-// =============================================
+// ===============================================
 // ANIMACIÓN DE APARICIÓN DE ELEMENTOS
 // Las cards aparecen con fade-in en la pantalla
-// =============================================
+// ===============================================
 
 const elementosAnimados = document.querySelectorAll(
   '.habilidad-card, .proyecto-card, .sobre-mi-grid, .contacto-grid'
