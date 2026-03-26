@@ -40,7 +40,6 @@ const barras = document.querySelectorAll('.barra-relleno');
 const observador = new IntersectionObserver((entradas) => {
   entradas.forEach(entrada => {
     if (entrada.isIntersecting) {
-      // La barra ya tiene su ancho definido en el HTML con style="width: X%"
       // El CSS hace la transición automáticamente
       entrada.target.style.width = entrada.target.style.width;
     }
@@ -95,11 +94,11 @@ form.addEventListener('submit', async (e) => {
 
     if (response.ok) {
       // Éxito
-      alert('¡Mensaje enviado correctamente! Gracias por contactarme.');
+      alert('¡Mensaje enviado correctamente! Gracias por por tu mensaje.');
       form.reset(); // Limpiar formulario
     } else {
       // Error
-      alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo.');
+      alert('se ha producido un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
     }
   } catch (error) {
     alert('Error de conexión. Verifica tu internet e intenta de nuevo.');
@@ -121,7 +120,7 @@ estiloAnimacion.textContent = `
   .animacion-entrada {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 1s ease, transform 1s ease;
   }
   .animacion-entrada.visible {
     opacity: 1;
