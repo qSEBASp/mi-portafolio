@@ -45,6 +45,14 @@ ul {
 /*============================
     COMPONENTES REUTILIZABLES
 =============================*/
+.favicon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
 .contenedor {
   max-width: 1100px;
   margin: 0 auto;
