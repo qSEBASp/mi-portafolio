@@ -8,51 +8,11 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" class="favicon"/>
   </head>
   <body>
-
-    <!--=== NAVEGACIÓN ===-->
-    <nav class="navbar">
-      <a href="https://github.com/qSEBASp" target="_blank" class="nav-logo">&lt; qSEBASp &#47;&gt;</a>
-      <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle">&#9776;</button>
-    </nav>
-
-    <!--=== HERO ===-->
-    <section class="hero" id="inicio">
-      <div class="hero-content">
-        <div class="hero-avatares">
-          <div class="burbuja-foto">
-            <img src="assets/img/foto-sebastian.jpg" alt="Sebastián Quiqui" />
-          </div>
-          <div class="burbuja-logo">
-            <img src="assets/img/favicon.png" alt="Logo qSEBASp" />
-          </div>
-        </div>
-        <p class="hero-saludo">Hola, soy</p>
-        <h1 class="hero-nombre">Sebastián Quiqui</h1>
-        <p class="hero-nickname">aka <span>qSEBASp</span></p>
-        <h2 class="hero-rol">Programador empírico & autodidacta 🇨🇴</h2>
-        <p class="hero-descripcion">
-          Me apasiona la programación: soy empírico, aprendo rápido y me adapto a cualquier desafío.
-          También tengo habilidades de liderazgo y disfruto construir proyectos que generen impacto.
-        </p>
-        <div class="hero-botones">
-          <a href="#proyectos" class="btn-primario">Ver proyectos</a>
-          <a href="#contacto" class="btn-secundario">Contáctame</a>
-        </div>
-      </div>
-    </section>
-
-    <!--=== SOBRE MÍ ===-->
-    <section class="seccion" id="sobre-mi">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Sobre mí</h2>
-        <div class="sobre-mi-grid">
-          <div class="sobre-mi-fotos">
+    <div class="layout">
+      <!--=== SIDEBAR DERECHO (HERO FIJO) ===-->
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-fotos">
             <div class="burbuja-foto">
               <img src="assets/img/foto-sebastian.jpg" alt="Sebastián Quiqui" />
             </div>
@@ -60,7 +20,34 @@
               <img src="assets/img/favicon.png" alt="Logo qSEBASp" />
             </div>
           </div>
-          <div class="sobre-mi-texto">
+          <p class="sidebar-saludo">Hola, soy</p>
+          <h1 class="sidebar-nombre">Sebastián Quiqui</h1>
+          <p class="sidebar-nickname">aka <span>qSEBASp</span></p>
+          <h2 class="sidebar-rol">Programador empírico & autodidacta 🇨🇴</h2>
+          <p class="sidebar-descripcion">
+            Me apasiona la programación: soy empírico, aprendo rápido y me adapto a cualquier desafío.
+            También tengo habilidades de liderazgo y disfruto construir proyectos que generen impacto.
+          </p>
+          
+          <nav class="sidebar-nav">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+
+          <div class="sidebar-contacto">
+            <a href="mailto:sebasfonque@gmail.com" class="btn-primario">Contáctame</a>
+          </div>
+        </div>
+      </aside>
+
+      <!--=== CONTENIDO PRINCIPAL (IZQUIERDA) ===-->
+      <main class="contenido">
+        <!--=== SOBRE MÍ ===-->
+        <section class="seccion" id="sobre-mi">
+          <h2 class="seccion-titulo">Sobre mí</h2>
+          <div class="sobre-mi-contenido">
             <p>
               Soy un <strong>programador empírico</strong> con mucha motivación por crecer cada día.
               Aprendo rápido, practico constantemente y convierto cada reto en una oportunidad de mejora.
@@ -78,155 +65,139 @@
               pero no me quedo con lo primero que me da. Lo reviso, lo ajusto y le meto mano
               hasta que el resultado sea realmente mío: <em>limpio, funcional y con mi propio estilo</em>.
             </blockquote>
-          </div>
-          <div class="sobre-mi-derecha">
-          <div class="sobre-mi-info">
-            <ul class="info-lista">
-              <li><span>📍 Ubicación:</span> Bogotá, Colombia 🇨🇴</li>
-              <li><span>🎓 Estado:</span> Estudiando</li>
-              <li><span>💼 Disponible:</span> Para proyectos</li>
-              <li><span>🌐 Idiomas:</span> Español, Inglés</li>
-            </ul>
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--=== HABILIDADES || en desarrollo ===-->
-    <section class="seccion seccion-oscura" id="habilidades">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Habilidades</h2>
-        <div class="habilidades-grid">
-
-          <div class="habilidad-card">
-            <div class="habilidad-icono">🌐</div>
-            <h3>HTML</h3>
-            <p>Estructura semántica de páginas web.</p>
-            <div class="barra-progreso">
-              <div class="barra-relleno" style="width: 100%"></div>
+            <div class="info-box">
+              <ul class="info-lista">
+                <li><span>📍 Ubicación:</span> Bogotá, Colombia 🇨🇴</li>
+                <li><span>🎓 Estado:</span> Estudiando</li>
+                <li><span>💼 Disponible:</span> Para proyectos</li>
+                <li><span>🌐 Idiomas:</span> Español, Inglés</li>
+              </ul>
             </div>
           </div>
+        </section>
 
-          <div class="habilidad-card">
-            <div class="habilidad-icono">🎨</div>
-            <h3>CSS</h3>
-            <p>Estilos, layouts y diseño responsivo.</p>
-            <div class="barra-progreso">
-              <div class="barra-relleno" style="width: 80%"></div>
+        <!--=== HABILIDADES ===-->
+        <section class="seccion seccion-oscura" id="habilidades">
+          <h2 class="seccion-titulo">Habilidades</h2>
+          <div class="habilidades-grid">
+            <div class="habilidad-card">
+              <div class="habilidad-icono">🌐</div>
+              <h3>HTML</h3>
+              <p>Estructura semántica de páginas web.</p>
+              <div class="barra-progreso">
+                <div class="barra-relleno" style="width: 100%"></div>
+              </div>
             </div>
-          </div>
 
-          <div class="habilidad-card">
-            <div class="habilidad-icono">🐍</div>
-            <h3>Python</h3>
-            <p>Scripts y automatización.</p>
-            <div class="barra-progreso">
-              <div class="barra-relleno" style="width: 10%"></div>
+            <div class="habilidad-card">
+              <div class="habilidad-icono">🎨</div>
+              <h3>CSS</h3>
+              <p>Estilos, layouts y diseño responsivo.</p>
+              <div class="barra-progreso">
+                <div class="barra-relleno" style="width: 80%"></div>
+              </div>
             </div>
-          </div>
 
-          <div class="habilidad-card">
-            <div class="habilidad-icono">⚡</div>
-            <h3>JavaScript</h3>
-            <p>Interactividad y lógica en el navegador.<br> 
-            &gt;&gt;&gt; APRENDIENDO ACTUALMENTE &lt;&lt;&lt;</p>
-            <div class="barra-progreso">
-              <div class="barra-relleno" style="width: 50%"></div>
+            <div class="habilidad-card">
+              <div class="habilidad-icono">🐍</div>
+              <h3>Python</h3>
+              <p>Scripts y automatización.</p>
+              <div class="barra-progreso">
+                <div class="barra-relleno" style="width: 10%"></div>
+              </div>
+            </div>
+
+            <div class="habilidad-card">
+              <div class="habilidad-icono">⚡</div>
+              <h3>JavaScript</h3>
+              <p>Interactividad y lógica en el navegador.<br>
+              &gt;&gt;&gt; APRENDIENDO ACTUALMENTE &lt;&lt;&lt;</p>
+              <div class="barra-progreso">
+                <div class="barra-relleno" style="width: 50%"></div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!--=== PROYECTOS || en desarrollo ===-->
-    <section class="seccion" id="proyectos">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Proyectos</h2>
-        <div class="proyectos-grid">
-
-          <!-- Proyecto 1 -->
-          <div class="proyecto-card">
-            <div class="proyecto-imagen">🚀</div>
-            <div class="proyecto-info">
-              <h3>Nombre del Proyecto</h3>
-              <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
-              <div class="proyecto-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
+        <!--=== PROYECTOS ===-->
+        <section class="seccion" id="proyectos">
+          <h2 class="seccion-titulo">Proyectos</h2>
+          <div class="proyectos-grid">
+            <div class="proyecto-card">
+              <div class="proyecto-imagen">🚀</div>
+              <div class="proyecto-info">
+                <h3>Nombre del Proyecto</h3>
+                <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
+                <div class="proyecto-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                </div>
+                <div class="proyecto-links">
+                  <a href="#" class="btn btn-pequeño">Ver código</a>
+                  <a href="#" class="btn btn-pequeño btn-outline">Demo</a>
+                </div>
               </div>
-              <div class="proyecto-links">
-                <a href="#" class="btn btn-pequeño">Ver código</a>
-                <a href="#" class="btn btn-pequeño btn-outline">Demo</a>
+            </div>
+
+            <div class="proyecto-card">
+              <div class="proyecto-imagen">💡</div>
+              <div class="proyecto-info">
+                <h3>Otro Proyecto</h3>
+                <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
+                <div class="proyecto-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">CSS</span>
+                </div>
+                <div class="proyecto-links">
+                  <a href="#" class="btn btn-pequeño">Ver código</a>
+                  <a href="#" class="btn btn-pequeño btn-outline">Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="proyecto-card">
+              <div class="proyecto-imagen">🐍</div>
+              <div class="proyecto-info">
+                <h3>Script Python</h3>
+                <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
+                <div class="proyecto-tags">
+                  <span class="tag">Python</span>
+                </div>
+                <div class="proyecto-links">
+                  <a href="#" class="btn btn-pequeño">Ver código</a>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- Proyecto 2 -->
-          <div class="proyecto-card">
-            <div class="proyecto-imagen">💡</div>
-            <div class="proyecto-info">
-              <h3>Otro Proyecto</h3>
-              <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
-              <div class="proyecto-tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">CSS</span>
-              </div>
-              <div class="proyecto-links">
-                <a href="#" class="btn btn-pequeño">Ver código</a>
-                <a href="#" class="btn btn-pequeño btn-outline">Demo</a>
-              </div>
+        <!--=== CONTACTO ===-->
+        <section class="seccion seccion-oscura" id="contacto">
+          <h2 class="seccion-titulo">Contacto</h2>
+          <div class="contacto-layout">
+            <div class="contacto-info">
+              <p>¿Tienes algún proyecto en mente o simplemente quieres saludar? ¡Escríbeme!</p>
+              <ul class="contacto-lista">
+                <li>📧 <a href="mailto:sebasfonque@gmail.com">sebasfonque@gmail.com</a></li>
+                <li>🐙 <a href="https://github.com/qSEBASp" target="_blank">github.com/qSEBASp</a></li>
+              </ul>
             </div>
+
+            <form class="contacto-form" id="contactoForm" action="https://formspree.io/f/mqeyvdql" method="POST">
+              <input type="text" name="name" placeholder="Tu nombre" required />
+              <input type="email" name="email" placeholder="Tu email" required />
+              <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+              <button type="submit" class="btn-primario">Enviar mensaje</button>
+            </form>
           </div>
+        </section>
 
-          <!-- Proyecto 3 -->
-          <div class="proyecto-card">
-            <div class="proyecto-imagen">🐍</div>
-            <div class="proyecto-info">
-              <h3>Script Python</h3>
-              <p>Descripción breve del proyecto y qué aprendiste haciéndolo.</p>
-              <div class="proyecto-tags">
-                <span class="tag">Python</span>
-              </div>
-              <div class="proyecto-links">
-                <a href="#" class="btn btn-pequeño">Ver código</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!--=== CONTACTO ===-->
-    <section class="seccion seccion-oscura" id="contacto">
-      <div class="contenedor">
-        <h2 class="seccion-titulo">Contacto</h2>
-        <div class="contacto-grid">
-          <div class="contacto-info">
-            <p>¿Tienes algún proyecto en mente o simplemente quieres saludar? ¡Escríbeme!</p>
-            <ul class="contacto-lista">
-              <li>📧 <a href="mailto:sebasfonque@gmail.com">sebasfonque@gmail.com</a></li>
-              <li>🐙 <a href="https://github.com/qSEBASp" target="_blank">github.com/qSEBASp</a></li>
-            </ul>
-          </div>
-
-          <form class="contacto-form" id="contactoForm" action="https://formspree.io/f/mqeyvdql" method="POST">
-            <input type="text" name="name" placeholder="Tu nombre" required />
-            <input type="email" name="email" placeholder="Tu email" required />
-            <textarea name="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
-            <button type="submit" class="btn-primario">presione para enviar</button>
-          </form>
-          
-        </div>
-      </div>
-    </section>
-
-    <!--=== FOOTER ===-->
-    <footer class="footer">
-      <p>Hecho con ❤️ desde Bogotá 🇨🇴 por Sebastián Quiqui (qSEBASp) &mdash; 2026</p>
-    </footer>
+        <!--=== FOOTER ===-->
+        <footer class="footer">
+          <p>Hecho con ❤️ desde Bogotá 🇨🇴 por Sebastián Quiqui (qSEBASp) — 2026</p>
+        </footer>
+      </main>
+    </div>
 
     <script src="assets/js/script.js"></script>
   </body>
