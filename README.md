@@ -12,23 +12,31 @@ Sirve como CV en línea y vitrina de proyectos.
 
 ```
 mi-portafolio/
-├── index.html      → Estructura HTML de toda la página
-├── styles.css      → Estilos visuales (variables, layout, secciones, responsive)
-├── script.js       → Interactividad (navbar, animaciones, formulario)
-└── README.md       → Este archivo
+├── index.html          → Estructura HTML (semántico, SEO)
+├── LICENSE            → Licencia MIT
+├── assets/
+│   ├── css/
+│   │   └── styles.css → Estilos (variables, layout, animaciones)
+│   ├── js/
+│   │   └── script.js  → Interactividad (fade-in, smooth scroll)
+│   └── img/
+│       ├── favicon.png
+│       ├── foto-sebastian.jpg
+│       ├── logo-qSEBASp.jpg
+│       └── project-eclipsebot.png
+└── README.md          → Este archivo
 ```
 
 ---
 
 ## Secciones de la página
 
-| Sección      | Descripción                                      |
-|--------------|--------------------------------------------------|
-| Hero         | Presentación principal con nombre y nickname     |
-| Sobre mí     | Descripción personal e información de contacto  |
-| Habilidades  | Tecnologías con barras de progreso animadas      |
-| Proyectos    | Tarjetas con proyectos, tecnologías y enlaces    |
-| Contacto     | Formulario + datos de contacto directo           |
+| Sección     | Descripción                                   |
+|-------------|----------------------------------------------|
+| Perfil      | Foto, nombre, nickname, bio, redes             |
+| Sobre mí    | Descripción personal e información            |
+| Habilidades| Tecnologías con barras de progreso            |
+| Proyectos  | Tarjetas con proyectos y enlaces              |
 
 ---
 
@@ -41,11 +49,11 @@ mi-portafolio/
 
 ---
 
-## Tecnologías
+## Tecnologías usadas
 
-- HTML5 semántico
-- CSS3 (variables, grid, flexbox, animaciones)
-- JavaScript vanilla (IntersectionObserver, eventos, DOM)
+- **HTML5** semántico (SEO, accesibilidad)
+- **CSS3** (variables, grid, flexbox, animaciones)
+- **JavaScript** vanilla (IntersectionObserver)
 
 ---
 
@@ -71,6 +79,7 @@ GitHub Pages actualiza la página automáticamente tras el push.
 
 ## Contacto
 
-- 📧 qSEBASp@hotmail.com
+- 📧 sebasfonque@gmail.com
 - 📱 +57 304 296 6826
 - 🐙 github.com/qSEBASp
+- 💼 linkedin.com/in/sebas-quiqui-dev
