@@ -21,6 +21,8 @@
   --transition: 0.25s ease;
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-mono: 'Cascadia Code', 'Fira Code', monospace;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
 }
 
 /*══════════════════════════════════════════
@@ -38,10 +40,17 @@ html {
 
 body {
   font-family: var(--font);
-  background: var(--bg);
+  background: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), rgba(139, 92, 246, 0.08) 0%, rgba(16, 185, 129, 0.04) 40%, var(--bg) 70%), var(--bg);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 a {
@@ -75,8 +84,7 @@ img {
   position: fixed;
   left: 0;
   top: 0;
-  background: linear-gradient(180deg, #1a1a28 0%, #12121f 100%);
-  border-right: 1px solid var(--border);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -293,15 +301,7 @@ img {
 }
 
 .seccion-bg {
-  background: var(--bg-card);
-  margin-left: -3.5rem;
-  margin-right: -3.5rem;
-  padding: 3rem 3.5rem;
-  border-radius: var(--radius);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
+  /* Hereda el fondo unificado */
 }
 
 .titulo-seccion {
@@ -338,10 +338,7 @@ img {
 .filosofia-box {
   margin: 1.5rem 0;
   padding: 1.25rem;
-  background: linear-gradient(135deg, rgba(153, 27, 27, 0.08), rgba(16, 185, 129, 0.04));
   border-left: 3px solid var(--primary);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .filosofia-box p {
@@ -374,9 +371,6 @@ img {
   flex-direction: column;
   gap: 0.25rem;
   padding: 0.75rem 1rem;
-  background: var(--bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
 }
 
 .info-label {
@@ -403,51 +397,10 @@ img {
 
 .habilidad {
   padding: 1rem;
-  background: var(--bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
-
-.habilidad-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.habilidad-icon {
-  font-size: 1.2rem;
-  width: 24px;
-  text-align: center;
-}
-
-.habilidad-nombre {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text);
-  flex: 1;
-}
-
-.habilidad-nivel {
-  text-align: right;
-  min-width: 45px;
-  font-size: 0.85rem;
-  color: var(--primary);
-  font-weight: 600;
-font-family: var(--font-mono);
-}
-
-.habilidad {
-  padding: 1rem;
-  background: rgba(26, 26, 36, 0.8);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .habilidad:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .habilidad-fill {
@@ -463,7 +416,6 @@ font-family: var(--font-mono);
   color: var(--text-muted);
   padding-left: 2rem;
 }
-}
 
 /*══════════════════════════════════════════
      PROYECTOS
@@ -475,16 +427,11 @@ font-family: var(--font-mono);
 }
 
 .proyecto {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  overflow: hidden;
   transition: all var(--transition);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .proyecto:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
 .proyecto-cover {
@@ -701,9 +648,7 @@ font-family: var(--font-mono);
   }
   
   .seccion-bg {
-    margin-left: -2rem;
-    margin-right: -2rem;
-    padding: 2rem;
+    /* Hereda el fondo unificado */
   }
   
   .info-grid {
@@ -754,9 +699,7 @@ font-family: var(--font-mono);
   }
   
   .seccion-bg {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    padding: 1.5rem;
+    /* Hereda el fondo unificado */
   }
   
   .info-grid {

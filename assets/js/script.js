@@ -7,6 +7,41 @@
   'use strict';
 
   // ===============================================
+  // FONDO REACTIVO AL MOUSE
+  // ===============================================
+  const initMouseBackground = () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let ticking = false;
+    const root = document.documentElement;
+
+    const updateMousePosition = (e) => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        root.style.setProperty('--mouse-x', x + '%');
+        root.style.setProperty('--mouse-y', y + '%');
+        ticking = false;
+      });
+    };
+
+    document.addEventListener('mousemove', updateMousePosition, { passive: true });
+
+    // Fallback táctil para móviles
+    document.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const x = (touch.clientX / window.innerWidth) * 100;
+        const y = (touch.clientY / window.innerHeight) * 100;
+        root.style.setProperty('--mouse-x', x + '%');
+        root.style.setProperty('--mouse-y', y + '%');
+      }
+    }, { passive: true });
+  };
+
+  // ===============================================
   // ANIMACIÓN DE APARICIÓN AL HACER SCROLL
   // ===============================================
   const fadeInSections = () => {
@@ -68,10 +103,12 @@
   // ===============================================
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+      initMouseBackground();
       fadeInSections();
       smoothScroll();
     });
   } else {
+    initMouseBackground();
     fadeInSections();
     smoothScroll();
   }
