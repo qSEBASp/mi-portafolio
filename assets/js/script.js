@@ -136,6 +136,23 @@
   };
 
   // ===============================================
+  // ACORDEÓN DE HABILIDADES (UNO ABIERTO A LA VEZ)
+  // ===============================================
+  const initSkillsAccordion = () => {
+    const groups = document.querySelectorAll('.skill-group');
+    if (!groups.length) return;
+
+    groups.forEach(group => {
+      group.addEventListener('toggle', () => {
+        if (!group.open) return;
+        groups.forEach(other => {
+          if (other !== group) other.open = false;
+        });
+      });
+    });
+  };
+
+  // ===============================================
   // INICIALIZAR CUANDO DOM ESTÉ LISTO
   // ===============================================
   if (document.readyState === 'loading') {
@@ -143,11 +160,13 @@
       initMouseBackground();
       fadeInSections();
       smoothScroll();
+      initSkillsAccordion();
     });
   } else {
     initMouseBackground();
     fadeInSections();
     smoothScroll();
+    initSkillsAccordion();
   }
 
 })();

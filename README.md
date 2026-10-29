@@ -36,7 +36,7 @@ mi-portafolio/
 |-------------|----------------------------------------------|
 | Perfil      | Foto, nombre, nickname, bio, redes             |
 | Sobre mí    | Descripción personal e información            |
-| Habilidades| Tecnologías agrupadas por área, con nivel y barra de progreso |
+| Habilidades| Acordeón por área con logos de marca y nivel en puntos  |
 | Proyectos  | Tarjetas con proyectos y enlaces              |
 
 ---
@@ -55,6 +55,7 @@ mi-portafolio/
 - **HTML5** semántico (SEO, accesibilidad)
 - **CSS3** (variables, grid, flexbox, animaciones)
 - **JavaScript** vanilla (IntersectionObserver)
+- **Iconos**: logos de [Simple Icons](https://simpleicons.org) (CC0) y [Lucide](https://lucide.dev) (ISC), inline como sprite SVG
 
 ---
 
