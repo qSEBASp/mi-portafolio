@@ -36,7 +36,7 @@ mi-portafolio/
 |-------------|----------------------------------------------|
 | Perfil      | Foto, nombre, nickname, bio, redes             |
 | Sobre mí    | Descripción personal e información            |
-| Habilidades| Tecnologías con barras de progreso            |
+| Habilidades| Tecnologías agrupadas por área, con nivel y barra de progreso |
 | Proyectos  | Tarjetas con proyectos y enlaces              |
 
 ---
