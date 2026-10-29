@@ -23,7 +23,8 @@ mi-portafolio/
 │       ├── favicon.png
 │       ├── foto-sebastian.jpg
 │       ├── logo-qSEBASp.jpg
-│       └── project-eclipsebot.png
+│       ├── project-eclipsebot.png
+│       └── project-quiquia.svg
 └── README.md          → Este archivo
 ```
 
