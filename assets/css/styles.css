@@ -317,7 +317,8 @@ img {
 }
 
 .footer-btns {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   width: 100%;
 }
@@ -336,6 +337,7 @@ img {
 }
 
 .btn-contacto {
+  grid-column: 1 / -1;
   background: var(--primary);
   color: var(--text);
   animation: btnPulse 12s ease-in-out infinite;
@@ -1082,6 +1084,10 @@ img {
      RESPONSIVE
 ════════════════���═════════════════════════*/
 @media (max-width: 1100px) {
+  .layout {
+    flex-direction: column;
+  }
+
   .perfil, .contenido {
     width: 100%;
   }
@@ -1162,10 +1168,6 @@ img {
   }
   
   .perfil-footer {
-    flex-direction: column;
-  }
-  
-  .footer-btns {
     flex-direction: column;
   }
   
