@@ -18,7 +18,7 @@ mi-portafolio/
 │   ├── css/
 │   │   └── styles.css → Estilos (variables, layout, animaciones)
 │   ├── js/
-│   │   └── script.js  → Interactividad (fade-in, smooth scroll)
+│   │   └── script.js  → Interactividad (fade-in, smooth scroll, filas infinitas)
 │   └── img/
 │       ├── favicon.png
 │       ├── foto-sebastian.jpg
@@ -36,7 +36,7 @@ mi-portafolio/
 |-------------|----------------------------------------------|
 | Perfil      | Foto, nombre, nickname, bio, redes             |
 | Sobre mí    | Descripción personal e información            |
-| Habilidades| Acordeón por área con logos de marca y nivel en puntos  |
+| Habilidades| 5 filas infinitas por área, con logos, nivel en puntos y scroll con la rueda |
 | Proyectos  | Tarjetas con proyectos y enlaces              |
 
 ---
@@ -54,7 +54,7 @@ mi-portafolio/
 
 - **HTML5** semántico (SEO, accesibilidad)
 - **CSS3** (variables, grid, flexbox, animaciones)
-- **JavaScript** vanilla (IntersectionObserver)
+- **JavaScript** vanilla (IntersectionObserver, requestAnimationFrame)
 - **Iconos**: logos de [Simple Icons](https://simpleicons.org) (CC0) y [Lucide](https://lucide.dev) (ISC), inline como sprite SVG
 
 ---

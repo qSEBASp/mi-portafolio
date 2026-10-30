@@ -151,236 +151,210 @@
           </div>
         </section>
 
-        <!-- SECCIÓN: HABILIDADES -->
+                <!-- SECCIÓN: HABILIDADES -->
         <section id="habilidades" class="seccion">
-          <h2 class="titulo-seccion">Habilidades</h2>
-          <p class="seccion-intro">Tecnologías que uso de verdad en mis proyectos: el backend de Quiqu.ia y EclipseBot está en Python, y la interfaz que estás viendo la escribo a mano.</p>
+          <div class="skills-header">
+            <h2 class="titulo-seccion">Habilidades</h2>
+            <button class="skills-toggle" type="button" aria-pressed="false">
+              <svg class="skills-toggle-pause" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+              <svg class="skills-toggle-play" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <span class="skills-toggle-label">Pausar</span>
+            </button>
+          </div>
+          <p class="seccion-intro">Tecnologías que uso de verdad en mis proyectos: el backend de Quiqu.ia y EclipseBot está en Python, y la interfaz que estás viendo la escribo a mano. Pasa el cursor por una fila y usa la rueda para explorarla.</p>
 
-          <div class="skills">
+          <div class="skills-marquees">
 
             <!-- Frontend -->
-            <details class="skill-group" open>
-              <summary class="skill-group-head">
-                <span class="skill-group-chevron" aria-hidden="true"></span>
-                <span class="skill-group-name">Frontend</span>
-                <span class="skill-group-count">5</span>
-                <span class="skill-group-strip" aria-hidden="true">
-                  <svg class="strip-logo s-html" focusable="false"><use href="#i-html" /></svg>
-                  <svg class="strip-logo s-css" focusable="false"><use href="#i-css" /></svg>
-                  <svg class="strip-logo s-js" focusable="false"><use href="#i-js" /></svg>
-                  <svg class="strip-logo s-ts" focusable="false"><use href="#i-ts" /></svg>
-                  <svg class="strip-logo s-next" focusable="false"><use href="#i-next" /></svg>
-                </span>
-              </summary>
-              <div class="skill-group-body">
-                <div class="skill-group-inner">
+            <div class="marquee-row" data-direction="-1" tabindex="0" role="group" aria-label="Frontend">
+              <span class="marquee-label">Frontend</span>
+              <div class="marquee-viewport">
+                <div class="marquee-track">
+                  <div class="marquee-seq">
 
-                  <div class="skill s-html">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-html" /></svg>
-                    <span class="skill-name">HTML</span>
-                    <span class="skill-dots" data-nivel="5" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: master</span>
+                    <div class="skill s-html">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-html" /></svg>
+                      <span class="skill-name">HTML</span>
+                      <span class="skill-dots" data-nivel="5" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: master</span>
+                    </div>
+
+                    <div class="skill s-css">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-css" /></svg>
+                      <span class="skill-name">CSS</span>
+                      <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: avanzado</span>
+                    </div>
+
+                    <div class="skill s-js">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-js" /></svg>
+                      <span class="skill-name">JavaScript</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
+                    <div class="skill s-ts">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-ts" /></svg>
+                      <span class="skill-name">TypeScript</span>
+                      <span class="skill-dots" data-nivel="2" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: básico</span>
+                    </div>
+
+                    <div class="skill s-next">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-next" /></svg>
+                      <span class="skill-name">Next.js</span>
+                      <span class="skill-dots" data-nivel="2" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: básico</span>
+                    </div>
+
                   </div>
-
-                  <div class="skill s-css">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-css" /></svg>
-                    <span class="skill-name">CSS</span>
-                    <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: avanzado</span>
-                  </div>
-
-                  <div class="skill s-js">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-js" /></svg>
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
-                  <div class="skill s-ts">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-ts" /></svg>
-                    <span class="skill-name">TypeScript</span>
-                    <span class="skill-dots" data-nivel="2" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: básico</span>
-                  </div>
-
-                  <div class="skill s-next">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-next" /></svg>
-                    <span class="skill-name">Next.js</span>
-                    <span class="skill-dots" data-nivel="2" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: básico</span>
-                  </div>
-
                 </div>
               </div>
-            </details>
+              <span class="marquee-hint" aria-hidden="true">scroll ↕</span>
+            </div>
 
             <!-- Backend y datos -->
-            <details class="skill-group">
-              <summary class="skill-group-head">
-                <span class="skill-group-chevron" aria-hidden="true"></span>
-                <span class="skill-group-name">Backend &amp; datos</span>
-                <span class="skill-group-count">4</span>
-                <span class="skill-group-strip" aria-hidden="true">
-                  <svg class="strip-logo s-python" focusable="false"><use href="#i-python" /></svg>
-                  <svg class="strip-logo s-fastapi" focusable="false"><use href="#i-fastapi" /></svg>
-                  <svg class="strip-logo s-sqlite" focusable="false"><use href="#i-sqlite" /></svg>
-                  <svg class="strip-logo s-rest" focusable="false"><use href="#i-rest" /></svg>
-                </span>
-              </summary>
-              <div class="skill-group-body">
-                <div class="skill-group-inner">
+            <div class="marquee-row" data-direction="1" tabindex="0" role="group" aria-label="Backend y datos">
+              <span class="marquee-label">Backend &amp; datos</span>
+              <div class="marquee-viewport">
+                <div class="marquee-track">
+                  <div class="marquee-seq">
 
-                  <div class="skill s-python">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-python" /></svg>
-                    <span class="skill-name">Python</span>
-                    <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: avanzado</span>
+                    <div class="skill s-python">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-python" /></svg>
+                      <span class="skill-name">Python</span>
+                      <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: avanzado</span>
+                    </div>
+
+                    <div class="skill s-fastapi">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-fastapi" /></svg>
+                      <span class="skill-name">FastAPI</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
+                    <div class="skill s-sqlite">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-sqlite" /></svg>
+                      <span class="skill-name">SQL &amp; SQLite</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
+                    <div class="skill s-rest">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-rest" /></svg>
+                      <span class="skill-name">APIs REST</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
                   </div>
-
-                  <div class="skill s-fastapi">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-fastapi" /></svg>
-                    <span class="skill-name">FastAPI</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
-                  <div class="skill s-sqlite">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-sqlite" /></svg>
-                    <span class="skill-name">SQL &amp; SQLite</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
-                  <div class="skill s-rest">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-rest" /></svg>
-                    <span class="skill-name">APIs REST</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
                 </div>
               </div>
-            </details>
+              <span class="marquee-hint" aria-hidden="true">scroll ↕</span>
+            </div>
 
             <!-- IA y automatización -->
-            <details class="skill-group">
-              <summary class="skill-group-head">
-                <span class="skill-group-chevron" aria-hidden="true"></span>
-                <span class="skill-group-name">IA &amp; automatización</span>
-                <span class="skill-group-count">3</span>
-                <span class="skill-group-strip" aria-hidden="true">
-                  <svg class="strip-logo s-llm" focusable="false"><use href="#i-llm" /></svg>
-                  <svg class="strip-logo s-prompt" focusable="false"><use href="#i-prompt" /></svg>
-                  <svg class="strip-logo s-data" focusable="false"><use href="#i-data" /></svg>
-                </span>
-              </summary>
-              <div class="skill-group-body">
-                <div class="skill-group-inner">
+            <div class="marquee-row" data-direction="-1" tabindex="0" role="group" aria-label="IA y automatización">
+              <span class="marquee-label">IA &amp; automatización</span>
+              <div class="marquee-viewport">
+                <div class="marquee-track">
+                  <div class="marquee-seq">
 
-                  <div class="skill s-llm">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-llm" /></svg>
-                    <span class="skill-name">Integración de LLM</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
+                    <div class="skill s-llm">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-llm" /></svg>
+                      <span class="skill-name">Integración de LLM</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
+                    <div class="skill s-prompt">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-prompt" /></svg>
+                      <span class="skill-name">Prompt engineering</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
+                    <div class="skill s-data">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-data" /></svg>
+                      <span class="skill-name">Análisis de datos</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
                   </div>
-
-                  <div class="skill s-prompt">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-prompt" /></svg>
-                    <span class="skill-name">Prompt engineering</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
-                  <div class="skill s-data">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-data" /></svg>
-                    <span class="skill-name">Análisis de datos</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
                 </div>
               </div>
-            </details>
+              <span class="marquee-hint" aria-hidden="true">scroll ↕</span>
+            </div>
 
             <!-- Herramientas -->
-            <details class="skill-group">
-              <summary class="skill-group-head">
-                <span class="skill-group-chevron" aria-hidden="true"></span>
-                <span class="skill-group-name">Herramientas</span>
-                <span class="skill-group-count">3</span>
-                <span class="skill-group-strip" aria-hidden="true">
-                  <svg class="strip-logo s-git" focusable="false"><use href="#i-git" /></svg>
-                  <svg class="strip-logo s-powershell" focusable="false"><use href="#i-powershell" /></svg>
-                  <svg class="strip-logo s-deploy" focusable="false"><use href="#i-deploy" /></svg>
-                </span>
-              </summary>
-              <div class="skill-group-body">
-                <div class="skill-group-inner">
+            <div class="marquee-row" data-direction="1" tabindex="0" role="group" aria-label="Herramientas">
+              <span class="marquee-label">Herramientas</span>
+              <div class="marquee-viewport">
+                <div class="marquee-track">
+                  <div class="marquee-seq">
 
-                  <div class="skill s-git">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-git" /></svg>
-                    <span class="skill-name">Git &amp; GitHub</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
+                    <div class="skill s-git">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-git" /></svg>
+                      <span class="skill-name">Git &amp; GitHub</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
+                    <div class="skill s-powershell">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-powershell" /></svg>
+                      <span class="skill-name">PowerShell</span>
+                      <span class="skill-dots" data-nivel="2" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: básico</span>
+                    </div>
+
+                    <div class="skill s-deploy">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-deploy" /></svg>
+                      <span class="skill-name">Despliegue web</span>
+                      <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: intermedio</span>
+                    </div>
+
                   </div>
-
-                  <div class="skill s-powershell">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-powershell" /></svg>
-                    <span class="skill-name">PowerShell</span>
-                    <span class="skill-dots" data-nivel="2" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: básico</span>
-                  </div>
-
-                  <div class="skill s-deploy">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-deploy" /></svg>
-                    <span class="skill-name">Despliegue web</span>
-                    <span class="skill-dots" data-nivel="3" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: intermedio</span>
-                  </div>
-
                 </div>
               </div>
-            </details>
+              <span class="marquee-hint" aria-hidden="true">scroll ↕</span>
+            </div>
 
             <!-- Habilidades blandas -->
-            <details class="skill-group">
-              <summary class="skill-group-head">
-                <span class="skill-group-chevron" aria-hidden="true"></span>
-                <span class="skill-group-name">Habilidades blandas</span>
-                <span class="skill-group-count">3</span>
-                <span class="skill-group-strip" aria-hidden="true">
-                  <svg class="strip-logo s-leadership" focusable="false"><use href="#i-leadership" /></svg>
-                  <svg class="strip-logo s-comm" focusable="false"><use href="#i-comm" /></svg>
-                  <svg class="strip-logo s-analytics" focusable="false"><use href="#i-analytics" /></svg>
-                </span>
-              </summary>
-              <div class="skill-group-body">
-                <div class="skill-group-inner">
+            <div class="marquee-row" data-direction="-1" tabindex="0" role="group" aria-label="Habilidades blandas">
+              <span class="marquee-label">Blandas</span>
+              <div class="marquee-viewport">
+                <div class="marquee-track">
+                  <div class="marquee-seq">
 
-                  <div class="skill s-leadership">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-leadership" /></svg>
-                    <span class="skill-name">Liderazgo</span>
-                    <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: avanzado</span>
+                    <div class="skill s-leadership">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-leadership" /></svg>
+                      <span class="skill-name">Liderazgo</span>
+                      <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: avanzado</span>
+                    </div>
+
+                    <div class="skill s-comm">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-comm" /></svg>
+                      <span class="skill-name">Comunicación</span>
+                      <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: avanzado</span>
+                    </div>
+
+                    <div class="skill s-analytics">
+                      <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-analytics" /></svg>
+                      <span class="skill-name">Pensamiento analítico</span>
+                      <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
+                      <span class="sr-only">Nivel: avanzado</span>
+                    </div>
+
                   </div>
-
-                  <div class="skill s-comm">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-comm" /></svg>
-                    <span class="skill-name">Comunicación</span>
-                    <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: avanzado</span>
-                  </div>
-
-                  <div class="skill s-analytics">
-                    <svg class="skill-logo" aria-hidden="true" focusable="false"><use href="#i-analytics" /></svg>
-                    <span class="skill-name">Pensamiento analítico</span>
-                    <span class="skill-dots" data-nivel="4" aria-hidden="true"></span>
-                    <span class="sr-only">Nivel: avanzado</span>
-                  </div>
-
                 </div>
               </div>
-            </details>
+              <span class="marquee-hint" aria-hidden="true">scroll ↕</span>
+            </div>
 
           </div>
         </section>
