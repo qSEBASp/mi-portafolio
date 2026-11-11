@@ -1,0 +1,146 @@
+---
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const email = 'sebasfonque@gmail.com';
+const phone = '+57 304 296 6826';
+const whatsapp = 'https://wa.me/573042966826?text=Hola%20Sebasti%C3%A1n%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte';
+const linkedin = 'https://www.linkedin.com/in/sebas-quiqui-dev/';
+const github = 'https://github.com/qSEBASp';
+---
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="shell">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow">{t.contact.eyebrow}</p>
+      <h2 class="section__title" id="contact-title">{t.contact.title}</h2>
+    </div>
+
+    <div class="contact">
+      <div data-reveal>
+        <p class="contact__statement" set:html={t.contact.statement} />
+        <p class="contact__text">{t.contact.text}</p>
+
+        <ul class="contact__list">
+          <li class="contact__row">
+            <span class="contact__label">{t.contact.rows.email}</span>
+            <a class="contact__value" href={`mailto:${email}`}>
+              {email}
+              <Icon name="arrowUpRight" size={14} />
+            </a>
+            <button
+              class="copy-btn"
+              type="button"
+              data-copy={email}
+              data-copy-label={t.actions.copied}
+            >
+              <Icon name="copy" size={12} />
+              {t.actions.copy}
+            </button>
+          </li>
+
+          <li class="contact__row">
+            <span class="contact__label">{t.contact.rows.phone}</span>
+            <a class="contact__value" href={whatsapp} target="_blank" rel="noopener noreferrer">
+              {phone}
+              <Icon name="arrowUpRight" size={14} />
+            </a>
+            <button
+              class="copy-btn"
+              type="button"
+              data-copy={phone}
+              data-copy-label={t.actions.copied}
+            >
+              <Icon name="copy" size={12} />
+              {t.actions.copy}
+            </button>
+          </li>
+
+          <li class="contact__row">
+            <span class="contact__label">{t.contact.rows.linkedin}</span>
+            <a class="contact__value" href={linkedin} target="_blank" rel="noopener noreferrer">
+              sebas-quiqui-dev
+              <Icon name="arrowUpRight" size={14} />
+            </a>
+          </li>
+
+          <li class="contact__row">
+            <span class="contact__label">{t.contact.rows.github}</span>
+            <a class="contact__value" href={github} target="_blank" rel="noopener noreferrer">
+              qSEBASp
+              <Icon name="arrowUpRight" size={14} />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <form
+        class="form"
+        action="https://formspree.io/f/mqeyvdql"
+        method="POST"
+        data-reveal
+        style="--d: 1;"
+      >
+        <input type="hidden" name="_subject" value={t.contact.form.subject} />
+        <input
+          class="honeypot"
+          type="text"
+          name="_gotcha"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+
+        <div class="field">
+          <label for="form-name">{t.contact.form.name}</label>
+          <input
+            id="form-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            placeholder={t.contact.form.namePlaceholder}
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="form-email">{t.contact.form.email}</label>
+          <input
+            id="form-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder={t.contact.form.emailPlaceholder}
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="form-message">{t.contact.form.message}</label>
+          <textarea
+            id="form-message"
+            name="message"
+            rows="5"
+            placeholder={t.contact.form.messagePlaceholder}
+            required
+          />
+        </div>
+
+        <div class="form__foot">
+          <p class="form__note">{t.contact.form.note}</p>
+          <button class="btn btn--primary" type="submit">
+            {t.contact.form.submit}
+            <Icon name="arrowUpRight" size={15} />
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="shell">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow">{t.about.eyebrow}</p>
+      <h2 class="section__title" id="about-title">{t.about.title}</h2>
+    </div>
+
+    <div class="about">
+      <div data-reveal>
+        <p class="lead">{t.about.lead}</p>
+        <div
+          class="prose"
+          style="margin-top: 1.5rem;"
+          set:html={t.about.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+        />
+      </div>
+
+      <div class="about__principles" data-reveal style="--d: 1;">
+        {t.about.principles.map((principle, i) => (
+          <article class="principle">
+            <span class="principle__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <h3 class="principle__title">{principle.title}</h3>
+              <p class="principle__text">{principle.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

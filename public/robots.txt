@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qsebasp.github.io/mi-portafolio/sitemap.xml

@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../i18n/ui';
+import { asset } from '../i18n/utils';
+import portrait from '../assets/img/foto-sebastian.jpg';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const cvFile = lang === 'es' ? 'docs/CV-Sebastian-Quiqui-ES.pdf' : 'docs/CV-Sebastian-Quiqui-EN.pdf';
+const cvLabel = lang === 'es' ? t.actions.cvEs : t.actions.cvEn;
+const github = 'https://github.com/qSEBASp';
+const linkedin = 'https://www.linkedin.com/in/sebas-quiqui-dev/';
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero__inner">
+    <div class="hero__copy">
+      <p class="status">
+        <span class="status__dot" aria-hidden="true"></span>
+        {t.hero.status}
+      </p>
+
+      <h1 class="hero__title" id="hero-title">
+        <span>{t.hero.titleFirst}</span>
+        <span><em>{t.hero.titleLast}</em></span>
+      </h1>
+
+      <p class="hero__role">
+        {t.hero.role.map((role) => <span>{role}</span>)}
+      </p>
+
+      <p class="hero__lead" set:html={t.hero.lead} />
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contact">
+          {t.actions.talk}
+          <Icon name="arrowDown" size={16} />
+        </a>
+        <a class="btn btn--ghost" href={asset(cvFile)} download aria-label={cvLabel} title={cvLabel}>
+          <Icon name="download" size={16} />
+          CV
+          <span class="tag">{lang.toUpperCase()}</span>
+        </a>
+        <a class="btn btn--quiet" href={github} target="_blank" rel="noopener noreferrer">
+          <Icon name="github" size={16} />
+          GitHub
+        </a>
+        <a class="btn btn--quiet" href={linkedin} target="_blank" rel="noopener noreferrer">
+          <Icon name="linkedin" size={16} />
+          LinkedIn
+        </a>
+      </div>
+
+      <ul class="hero__meta">
+        <li>{t.hero.meta.location}</li>
+        <li>{t.hero.meta.coords}</li>
+        <li>
+          <span class="sr-only">{t.hero.meta.time}</span>
+          <time data-local-time>--:--</time>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="hero__portrait">
+      <Image
+        src={portrait}
+        alt={lang === 'es' ? 'Retrato de Sebastián Quiqui' : 'Portrait of Sebastián Quiqui'}
+        widths={[280, 380, 560]}
+        sizes="(max-width: 860px) 260px, 380px"
+        format="webp"
+        quality={80}
+        loading="eager"
+        fetchpriority="high"
+      />
+      <figcaption class="hero__caption">
+        <span>{t.hero.caption.alias}</span>
+        <span>{t.hero.caption.year}</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <p class="hero__rail" aria-hidden="true">{t.hero.rail}</p>
+</section>
+
+<div class="ticker">
+  <div class="shell ticker__inner">
+    {t.hero.ticker.map((item) => (
+      <p class="ticker__item">
+        <span>{item.label}</span>
+        <b>{item.value}</b>
+      </p>
+    ))}
+  </div>
+</div>

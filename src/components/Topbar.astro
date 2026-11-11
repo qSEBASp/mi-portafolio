@@ -1,0 +1,75 @@
+---
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../i18n/ui';
+import { asset, localeUrl } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const cvFile = lang === 'es' ? 'docs/CV-Sebastian-Quiqui-ES.pdf' : 'docs/CV-Sebastian-Quiqui-EN.pdf';
+const cvLabel = lang === 'es' ? t.actions.cvEs : t.actions.cvEn;
+
+const nav = [
+  { id: 'about', label: t.nav.about },
+  { id: 'stack', label: t.nav.stack },
+  { id: 'projects', label: t.nav.projects },
+  { id: 'path', label: t.nav.path },
+  { id: 'contact', label: t.nav.contact },
+];
+---
+
+<header class="topbar">
+  <div class="shell topbar__inner">
+    <a class="brand" href={localeUrl(lang)}>
+      <span class="brand__mark">qS</span>
+      <span class="brand__name">Sebastián Quiqui</span>
+    </a>
+
+    <nav class="topbar__nav" aria-label={t.a11y.mainNav}>
+      {nav.map((item) => <a href={`#${item.id}`} data-nav={item.id}>{item.label}</a>)}
+    </nav>
+
+    <div class="topbar__actions">
+      <button
+        class="icon-btn"
+        type="button"
+        data-palette-open
+        aria-label={t.a11y.palette}
+        title={t.a11y.palette}
+      >
+        <Icon name="search" size={15} />
+        <kbd data-kbd>⌘K</kbd>
+      </button>
+
+      <div class="lang-switch">
+        <a href={localeUrl('es')} aria-current={lang === 'es'} data-lang-switch="es" hreflang="es" lang="es">ES</a>
+        <span aria-hidden="true">/</span>
+        <a href={localeUrl('en')} aria-current={lang === 'en'} data-lang-switch="en" hreflang="en" lang="en">EN</a>
+      </div>
+
+      <a
+        class="btn btn--ghost topbar__cv"
+        href={asset(cvFile)}
+        download
+        aria-label={cvLabel}
+        title={cvLabel}
+      >
+        <Icon name="download" size={14} />
+        {t.actions.cv}
+      </a>
+
+      <button
+        class="icon-btn menu-btn"
+        type="button"
+        data-menu-open
+        aria-controls="drawer"
+        aria-label={t.a11y.menu}
+      >
+        <Icon name="menu" size={18} />
+      </button>
+    </div>
+  </div>
+</header>

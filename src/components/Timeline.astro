@@ -1,0 +1,52 @@
+---
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../i18n/ui';
+import { asset } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const cvFile = lang === 'es' ? 'docs/CV-Sebastian-Quiqui-ES.pdf' : 'docs/CV-Sebastian-Quiqui-EN.pdf';
+---
+
+<section class="section" id="path" aria-labelledby="path-title">
+  <div class="shell">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow">{t.path.eyebrow}</p>
+      <h2 class="section__title" id="path-title">{t.path.title}</h2>
+      <p class="section__lead">{t.path.lead}</p>
+    </div>
+
+    <div class="timeline">
+      {t.path.items.map((item, i) => (
+        <div class="timeline__item" data-reveal style={`--d: ${i};`}>
+          <p class="timeline__when">{item.when}</p>
+          <div>
+            <h3 class="timeline__title">{item.title}</h3>
+            <p class="timeline__place">{item.place}</p>
+            <p class="timeline__text">{item.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="timeline__foot" data-reveal>
+      {t.path.foot.map((item) => (
+        <p>
+          <b>{item.label}</b>
+          {item.value}
+        </p>
+      ))}
+      <p>
+        <b>PDF</b>
+        <a href={asset(cvFile)} download>
+          {lang === 'es' ? t.actions.cvEs : t.actions.cvEn}
+          <Icon name="download" size={12} />
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

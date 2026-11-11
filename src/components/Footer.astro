@@ -1,0 +1,76 @@
+---
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../i18n/ui';
+import { asset, localeUrl } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const nav = [
+  { id: 'about', label: t.nav.about },
+  { id: 'stack', label: t.nav.stack },
+  { id: 'projects', label: t.nav.projects },
+  { id: 'path', label: t.nav.path },
+  { id: 'contact', label: t.nav.contact },
+];
+
+const cvs = [
+  { href: asset('docs/CV-Sebastian-Quiqui-ES.pdf'), label: t.actions.cvEs, tag: 'ES' },
+  { href: asset('docs/CV-Sebastian-Quiqui-EN.pdf'), label: t.actions.cvEn, tag: 'EN' },
+];
+---
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand"><span>qS</span>ebasQuiqui</p>
+        <p class="footer__note">{t.footer.tagline}</p>
+      </div>
+
+      <nav aria-label={t.footer.navTitle}>
+        <h2 class="footer__title">{t.footer.navTitle}</h2>
+        <div class="footer__links">
+          {nav.map((item) => <a href={`#${item.id}`}>{item.label}</a>)}
+        </div>
+      </nav>
+
+      <div>
+        <h2 class="footer__title">{t.footer.docsTitle}</h2>
+        <div class="footer__links">
+          {cvs.map((cv) => (
+            <a href={cv.href} download>
+              {cv.label} <span class="tag">{cv.tag} · PDF</span>
+            </a>
+          ))}
+          <a href="https://github.com/qSEBASp" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/sebas-quiqui-dev/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>{t.footer.rights}</p>
+      <p>
+        Bogotá · <time data-local-time>--:--</time>
+      </p>
+      <p>{t.footer.builtNote}</p>
+      <a href="#top">{t.a11y.top} <Icon name="arrowUp" size={12} /></a>
+    </div>
+  </div>
+</footer>
+
+<a
+  class="wa"
+  href="https://wa.me/573042966826?text=Hola%20Sebasti%C3%A1n%2C%20vi%20tu%20portafolio"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp"
+  title="WhatsApp"
+>
+  <Icon name="whatsapp" size={20} />
+</a>

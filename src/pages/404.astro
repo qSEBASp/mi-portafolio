@@ -1,0 +1,90 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { asset, localeUrl } from '../i18n/utils';
+
+const home = localeUrl('es');
+const english = localeUrl('en');
+---
+
+<!doctype html>
+<html lang="es" class="js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — Esta página no existe · Sebastián Quiqui</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#08080a" />
+    <link rel="icon" href={asset('favicon.svg')} type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="shell not-found" id="main">
+      <p class="eyebrow">Error 404</p>
+      <h1 class="not-found__title">Esta página <em>no existe</em></h1>
+      <p class="not-found__text">
+        Puede que el enlace esté roto o que la página se haya movido. Todo lo demás sigue
+        donde estaba.
+      </p>
+      <p class="not-found__text not-found__text--en" lang="en">
+        This page doesn’t exist. Maybe the link is broken or the page moved.
+      </p>
+
+      <div class="not-found__actions">
+        <a class="btn btn--primary" href={home}>
+          <Icon name="arrowUp" size={15} />
+          Volver al inicio
+        </a>
+        <a class="btn btn--ghost" href={english} hreflang="en" lang="en">Go to the English site</a>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  .not-found {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-content: center;
+    gap: 1.2rem;
+    min-height: 100dvh;
+    padding-block: 4rem;
+    justify-items: start;
+  }
+
+  .not-found__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    max-width: 16ch;
+  }
+
+  .not-found__title em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .not-found__text {
+    max-width: 48ch;
+    color: var(--ink-3);
+    font-size: 0.95rem;
+  }
+
+  .not-found__text--en {
+    font-size: 0.85rem;
+    color: var(--ink-4);
+  }
+
+  .not-found__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+  }
+</style>

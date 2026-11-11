@@ -1,0 +1,36 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section class="section" id="stack" aria-labelledby="stack-title">
+  <div class="shell">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow">{t.stack.eyebrow}</p>
+      <h2 class="section__title" id="stack-title">{t.stack.title}</h2>
+      <p class="section__lead">{t.stack.lead}</p>
+    </div>
+
+    <div class="stack">
+      {t.stack.groups.map((group, i) => (
+        <div class="stack__group" data-reveal style={`--d: ${i % 3};`}>
+          <h3>
+            <span>{group.title}</span>
+            <span class="stack__count">{String(group.items.length).padStart(2, '0')}</span>
+          </h3>
+          <ul class="stack__list">
+            {group.items.map((item) => <li class="chip">{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <p class="stack__note" data-reveal set:html={t.stack.note} />
+  </div>
+</section>

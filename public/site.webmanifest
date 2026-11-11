@@ -1,0 +1,24 @@
+{
+  "name": "Sebastián Quiqui — qSEBASp",
+  "short_name": "qSEBASp",
+  "description": "Portafolio de Sebastián Quiqui, desarrollador junior: Python, automatización y desarrollo web.",
+  "start_url": "/mi-portafolio/",
+  "scope": "/mi-portafolio/",
+  "display": "standalone",
+  "background_color": "#08080a",
+  "theme_color": "#08080a",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

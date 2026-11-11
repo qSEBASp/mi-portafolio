@@ -1,0 +1,152 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+import { ui, type Lang } from '../i18n/ui';
+import { asset, base, canonicalUrl, localeUrl, site } from '../i18n/utils';
+import jakarta from '../assets/fonts/plus-jakarta-sans-400-700-normal.woff2?url';
+import instrument from '../assets/fonts/instrument-serif-400-normal.woff2?url';
+import instrumentItalic from '../assets/fonts/instrument-serif-400-italic.woff2?url';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const canonical = canonicalUrl(lang);
+const ogImage = `${site}${asset('og.png')}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Sebastián Quiqui Fonque',
+  alternateName: 'qSEBASp',
+  jobTitle: lang === 'es' ? 'Desarrollador junior' : 'Junior developer',
+  description: t.meta.description,
+  url: `${site}${localeUrl(lang)}`,
+  email: 'mailto:sebasfonque@gmail.com',
+  telephone: '+573042966826',
+  image: ogImage,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bogotá',
+    addressCountry: 'CO',
+  },
+  sameAs: [
+    'https://github.com/qSEBASp',
+    'https://www.linkedin.com/in/sebas-quiqui-dev/',
+  ],
+  knowsLanguage: ['es', 'en'],
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Fundación Universitaria Areandina',
+  },
+  knowsAbout: [
+    'Python',
+    'JavaScript',
+    'TypeScript',
+    'FastAPI',
+    'Next.js',
+    'REST APIs',
+    'SQLite',
+    'Google Cloud Platform',
+    'Git',
+    'Test automation',
+  ],
+};
+---
+
+<!doctype html>
+<html lang={t.htmlLang} class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <meta name="author" content="Sebastián Quiqui Fonque" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#08080a" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Idiomas -->
+    <link rel="alternate" hreflang="es" href={`${site}${localeUrl('es')}`} />
+    <link rel="alternate" hreflang="en" href={`${site}${localeUrl('en')}`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}${localeUrl('es')}`} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="qSEBASp" />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.meta.ogAlt} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_CO' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_CO'} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={t.meta.ogAlt} />
+
+    <!-- Iconos -->
+    <link rel="icon" href={asset('favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={asset('apple-touch-icon.png')} />
+    <link rel="manifest" href={asset('site.webmanifest')} />
+    <link rel="sitemap" href={asset('sitemap.xml')} />
+
+    <!-- Fuentes -->
+    <link rel="preload" href={jakarta} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={instrument} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={instrumentItalic} as="font" type="font/woff2" crossorigin />
+
+    <script is:inline>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.a11y.skip}</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="spotlight" aria-hidden="true"></div>
+    <div class="page">
+      <span id="top" aria-hidden="true"></span>
+      <slot />
+    </div>
+    <script>
+      import {
+        initSpotlight,
+        initReveal,
+        initScrollSpy,
+        initLocalTime,
+        initShortcutLabel,
+        initCopy,
+        initCaseDialogs,
+        initMenu,
+        initPalette,
+        initLangSwitch,
+      } from '../scripts/ui';
+      initSpotlight();
+      initReveal();
+      initScrollSpy();
+      initLocalTime();
+      initShortcutLabel();
+      initCopy();
+      initCaseDialogs();
+      initMenu();
+      initPalette();
+      initLangSwitch();
+    </script>
+  </body>
+</html>

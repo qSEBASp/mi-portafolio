@@ -1,0 +1,209 @@
+---
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../i18n/ui';
+import { asset, localeUrl } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const sections = [
+  { id: 'about', label: t.nav.about },
+  { id: 'stack', label: t.nav.stack },
+  { id: 'projects', label: t.nav.projects },
+  { id: 'path', label: t.nav.path },
+  { id: 'contact', label: t.nav.contact },
+];
+
+const cases = [
+  { slug: 'quiquia', label: t.projects.list[0].title, hint: t.projects.list[0].index },
+  { slug: 'eclipsebot', label: t.projects.list[1].title, hint: t.projects.list[1].index },
+];
+
+const email = 'sebasfonque@gmail.com';
+const phone = '+57 304 296 6826';
+const cvFile = lang === 'es' ? 'docs/CV-Sebastian-Quiqui-ES.pdf' : 'docs/CV-Sebastian-Quiqui-EN.pdf';
+---
+
+<dialog class="palette" id="palette" aria-label={t.palette.open}>
+  <div class="palette__search">
+    <Icon name="search" size={16} />
+    <input
+      class="palette__input"
+      data-palette-input
+      type="text"
+      role="combobox"
+      aria-expanded="true"
+      aria-controls="palette-list"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      placeholder={t.palette.placeholder}
+    />
+    <span class="palette__hint" aria-hidden="true">esc</span>
+  </div>
+
+  <div class="palette__list" id="palette-list" data-palette-list role="listbox" aria-label={t.palette.open}>
+    <div data-palette-group>
+      <p class="palette__group">{t.palette.groups.go}</p>
+      {sections.map((section) => (
+        <a
+          class="palette__item"
+          role="option"
+          aria-selected="false"
+          href={`#${section.id}`}
+          data-palette-item
+          data-search={`${section.label} ${section.id} ir seccion section`}
+        >
+          <Icon name="arrowUpRight" size={15} />
+          <span>{section.label}</span>
+          <small>#{section.id}</small>
+        </a>
+      ))}
+    </div>
+
+    <div data-palette-group>
+      <p class="palette__group">{t.palette.groups.projects}</p>
+      {cases.map((item) => (
+        <button
+          class="palette__item"
+          role="option"
+          aria-selected="false"
+          type="button"
+          data-palette-item
+          data-open-case={item.slug}
+          data-search={`${item.label} proyecto project caso case`}
+        >
+          <Icon name="layers" size={15} />
+          <span>{item.label}</span>
+          <small>{item.hint}</small>
+        </button>
+      ))}
+    </div>
+
+    <div data-palette-group>
+      <p class="palette__group">{t.palette.groups.actions}</p>
+
+      <button
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        type="button"
+        data-palette-item
+        data-copy={email}
+        data-copy-label={t.actions.copied}
+        data-search={`correo email copy copiar ${email}`}
+      >
+        <Icon name="mail" size={15} />
+        <span>{t.palette.copyEmail}</span>
+        <small>{email}</small>
+      </button>
+
+      <button
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        type="button"
+        data-palette-item
+        data-copy={phone}
+        data-copy-label={t.actions.copied}
+        data-search={`whatsapp telefono phone copy copiar ${phone}`}
+      >
+        <Icon name="whatsapp" size={15} />
+        <span>{t.palette.copyPhone}</span>
+        <small>{phone}</small>
+      </button>
+
+      <a
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        href={asset(cvFile)}
+        download
+        data-palette-item
+        data-search="cv curriculum pdf descargar download"
+      >
+        <Icon name="download" size={15} />
+        <span>{lang === 'es' ? t.actions.cvEs : t.actions.cvEn}</span>
+        <small>PDF</small>
+      </a>
+
+      <a
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        href={localeUrl(lang === 'es' ? 'en' : 'es')}
+        data-palette-item
+        data-lang-switch={lang === 'es' ? 'en' : 'es'}
+        data-search="idioma language english español switch cambiar"
+      >
+        <Icon name="code" size={15} />
+        <span>{t.palette.lang}</span>
+        <small>{lang === 'es' ? 'EN' : 'ES'}</small>
+      </a>
+
+      <a
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        href="https://github.com/qSEBASp"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-palette-item
+        data-search="github repos codigo code"
+      >
+        <Icon name="github" size={15} />
+        <span>{t.palette.github}</span>
+        <small>↗</small>
+      </a>
+
+      <a
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        href="https://www.linkedin.com/in/sebas-quiqui-dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-palette-item
+        data-search="linkedin perfil profile"
+      >
+        <Icon name="linkedin" size={15} />
+        <span>{t.palette.linkedin}</span>
+        <small>↗</small>
+      </a>
+
+      <a
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        href="https://wa.me/573042966826"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-palette-item
+        data-search="whatsapp mensaje message chat"
+      >
+        <Icon name="whatsapp" size={15} />
+        <span>{t.palette.whatsapp}</span>
+        <small>↗</small>
+      </a>
+
+      <a
+        class="palette__item"
+        role="option"
+        aria-selected="false"
+        href="#top"
+        data-palette-item
+        data-search="arriba top inicio home"
+      >
+        <Icon name="arrowUp" size={15} />
+        <span>{t.palette.top}</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="palette__empty" data-palette-empty hidden>{t.palette.empty}</p>
+  <p class="palette__foot">{t.palette.hint}</p>
+</dialog>

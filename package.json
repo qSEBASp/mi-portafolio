@@ -1,0 +1,17 @@
+{
+  "name": "mi-portafolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "og": "node scripts/generate-og.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.4.10"
+  }
+}
