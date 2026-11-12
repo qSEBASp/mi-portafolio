@@ -420,13 +420,27 @@ p {
 
 .brand {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--ink);
+}
+
+.brand__logo {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line-2);
+  border-radius: 7px;
+  object-fit: cover;
+  transition: border-color var(--fast), transform var(--fast);
+}
+
+.brand:hover .brand__logo {
+  border-color: var(--accent);
+  transform: rotate(-3deg);
 }
 
 .brand__mark {
@@ -575,7 +589,7 @@ p {
 .hero__inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
 }
@@ -706,51 +720,6 @@ p {
   border-radius: 50%;
   background: var(--line-2);
   margin-right: 0.4rem;
-}
-
-.hero__portrait {
-  position: relative;
-  justify-self: end;
-  width: min(100%, 380px);
-}
-
-.hero__portrait img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: 50% 18%;
-  border: 1px solid var(--line-2);
-  border-radius: var(--r);
-  filter: saturate(0.92) contrast(1.03);
-}
-
-.hero__portrait::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--r);
-  background: linear-gradient(to top, rgba(8, 8, 10, 0.55) 0%, transparent 42%);
-  pointer-events: none;
-}
-
-.hero__caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.9rem;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  padding-inline: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-}
-
-.hero__caption a:hover {
-  color: var(--accent);
 }
 
 .hero__rail {
@@ -1311,17 +1280,28 @@ p {
 }
 
 .footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--ink);
 }
 
-.footer__brand span {
+.footer__logo {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line-2);
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+.footer__wordmark span {
   color: var(--accent);
 }
 
 .footer__note {
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
   max-width: 32ch;
   font-size: 0.82rem;
   line-height: 1.6;
@@ -1814,11 +1794,6 @@ html.js [data-reveal].is-in {
     display: inline-flex;
   }
 
-  .hero__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
-    gap: 2.5rem;
-  }
-
   .about,
   .contact {
     grid-template-columns: minmax(0, 1fr);
@@ -1836,20 +1811,6 @@ html.js [data-reveal].is-in {
 @media (max-width: 860px) {
   .hero {
     padding-top: 2.5rem;
-  }
-
-  .hero__inner {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero__copy {
-    order: 2;
-  }
-
-  .hero__portrait {
-    order: 1;
-    justify-self: start;
-    width: min(100%, 260px);
   }
 
   .hero__title {
@@ -1982,14 +1943,6 @@ html.js [data-reveal].is-in {
 
   .hero {
     padding-block: 0 1rem;
-  }
-
-  .hero__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__portrait {
-    width: 120px;
   }
 
   .project,

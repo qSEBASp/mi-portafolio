@@ -1,9 +1,7 @@
 ---
-import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import { ui, type Lang } from '../i18n/ui';
 import { asset } from '../i18n/utils';
-import portrait from '../assets/img/foto-sebastian.jpg';
 
 interface Props {
   lang: Lang;
@@ -66,23 +64,6 @@ const linkedin = 'https://www.linkedin.com/in/sebas-quiqui-dev/';
         </li>
       </ul>
     </div>
-
-    <figure class="hero__portrait">
-      <Image
-        src={portrait}
-        alt={lang === 'es' ? 'Retrato de Sebastián Quiqui' : 'Portrait of Sebastián Quiqui'}
-        widths={[280, 380, 560]}
-        sizes="(max-width: 860px) 260px, 380px"
-        format="webp"
-        quality={80}
-        loading="eager"
-        fetchpriority="high"
-      />
-      <figcaption class="hero__caption">
-        <span>{t.hero.caption.alias}</span>
-        <span>{t.hero.caption.year}</span>
-      </figcaption>
-    </figure>
   </div>
 
   <p class="hero__rail" aria-hidden="true">{t.hero.rail}</p>

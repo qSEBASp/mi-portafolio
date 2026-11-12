@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import { ui, type Lang } from '../i18n/ui';
 import { asset, localeUrl, otherLang } from '../i18n/utils';
+import logo from '../assets/img/logo-qsebasp.webp';
 
 interface Props {
   lang: Lang;
@@ -26,7 +28,14 @@ const cvFile = lang === 'es' ? 'docs/CV-Sebastian-Quiqui-ES.pdf' : 'docs/CV-Seba
   <div class="drawer__inner">
     <div class="drawer__top">
       <a class="brand" href={localeUrl(lang)}>
-        <span class="brand__mark">qS</span>
+        <Image
+          class="brand__logo"
+          src={logo}
+          width={60}
+          height={60}
+          alt=""
+          aria-hidden="true"
+        />
         <span class="brand__name">Sebastián Quiqui</span>
       </a>
       <button class="icon-btn" type="button" data-menu-close aria-label={t.a11y.close}>

@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import { ui, type Lang } from '../i18n/ui';
 import { asset, localeUrl } from '../i18n/utils';
+import logo from '../assets/img/logo-qsebasp.webp';
 
 interface Props {
   lang: Lang;
@@ -28,7 +30,18 @@ const cvs = [
   <div class="shell">
     <div class="footer__inner">
       <div>
-        <p class="footer__brand"><span>qS</span>ebasQuiqui</p>
+        <div class="footer__brand">
+          <Image
+            class="footer__logo"
+            src={logo}
+            width={88}
+            height={88}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <p class="footer__wordmark"><span>qS</span>ebasQuiqui</p>
+        </div>
         <p class="footer__note">{t.footer.tagline}</p>
       </div>
 

@@ -52,17 +52,16 @@ const OG = `
         font-size="16" letter-spacing="1.6" fill="#66635e">4.7110° N, 74.0721° W</text>
 </svg>`;
 
-const ICON = `
-<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#08080a"/>
-  <circle cx="30" cy="29" r="13" fill="none" stroke="#f04438" stroke-width="5.5"/>
-  <path d="M39.5 38.5 50 50" fill="none" stroke="#f04438" stroke-width="5.5" stroke-linecap="round"/>
-  <circle cx="50" cy="15" r="3" fill="#3ddc97"/>
-</svg>`;
+const ICON_SRC = 'src/assets/img/logo-qSEBASp.jpg';
+const ICON_CROP = { left: 72, top: 24, width: 320, height: 320 };
 
 const og = await sharp(Buffer.from(OG)).png({ quality: 92 }).toBuffer();
 await sharp(og).toFile('public/og.png');
 await sharp(Buffer.from(OG)).resize(1200, 630).jpeg({ quality: 86 }).toFile('public/og.jpg');
-await sharp(Buffer.from(ICON)).resize(180, 180).png().toFile('public/apple-touch-icon.png');
+await sharp(ICON_SRC)
+  .extract(ICON_CROP)
+  .resize(180, 180)
+  .png()
+  .toFile('public/apple-touch-icon.png');
 
 console.log('Listo: public/og.png, public/og.jpg, public/apple-touch-icon.png');

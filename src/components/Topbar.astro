@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import { ui, type Lang } from '../i18n/ui';
 import { asset, localeUrl } from '../i18n/utils';
+import logo from '../assets/img/logo-qsebasp.webp';
 
 interface Props {
   lang: Lang;
@@ -24,7 +26,15 @@ const nav = [
 <header class="topbar">
   <div class="shell topbar__inner">
     <a class="brand" href={localeUrl(lang)}>
-      <span class="brand__mark">qS</span>
+      <Image
+        class="brand__logo"
+        src={logo}
+        width={60}
+        height={60}
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+      />
       <span class="brand__name">Sebastián Quiqui</span>
     </a>
 

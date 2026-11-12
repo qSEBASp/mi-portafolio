@@ -51,10 +51,6 @@ const es = {
       coords: '4.7110° N, 74.0721° W',
       time: 'Hora local',
     },
-    caption: {
-      alias: 'qSEBASp',
-      year: 'Portafolio · 2026',
-    },
     rail: 'Desarrollador junior — Bogotá',
     ticker: [
       { label: 'Buscando', value: 'Desarrollo · Automatización · QA' },
@@ -101,7 +97,16 @@ const es = {
       },
       {
         title: 'Web y APIs',
-        items: ['FastAPI', 'Next.js', 'APIs REST', 'fetch / async', 'discord.py', 'asyncio', 'SQLAlchemy'],
+        items: [
+          'FastAPI',
+          'Next.js',
+          'APIs REST',
+          'fetch / async',
+          'Diseño responsive',
+          'discord.py',
+          'asyncio',
+          'SQLAlchemy',
+        ],
       },
       {
         title: 'Datos y calidad',
@@ -323,10 +328,6 @@ const en: typeof es = {
       coords: '4.7110° N, 74.0721° W',
       time: 'Local time',
     },
-    caption: {
-      alias: 'qSEBASp',
-      year: 'Portfolio · 2026',
-    },
     rail: 'Junior developer — Bogotá',
     ticker: [
       { label: 'Looking for', value: 'Development · Automation · QA' },
@@ -373,7 +374,16 @@ const en: typeof es = {
       },
       {
         title: 'Web & APIs',
-        items: ['FastAPI', 'Next.js', 'REST APIs', 'fetch / async', 'discord.py', 'asyncio', 'SQLAlchemy'],
+        items: [
+          'FastAPI',
+          'Next.js',
+          'REST APIs',
+          'fetch / async',
+          'Responsive design',
+          'discord.py',
+          'asyncio',
+          'SQLAlchemy',
+        ],
       },
       {
         title: 'Data & quality',
